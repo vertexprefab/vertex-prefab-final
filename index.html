@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertex Prefab | Modular Building Systems</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;600;700;800;900&family=Noto+Sans+Arabic:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      /* Font-face declarations for beIN Arabic fonts */
+      @font-face {
+        font-family: 'beIN Black';
+        src: url('fonts/beIN-Black.woff2') format('woff2'),
+             url('fonts/beIN-Black.woff') format('woff'),
+             url('fonts/beIN-Black.ttf') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'beIN Normal';
+        src: url('fonts/beIN-Normal.woff2') format('woff2'),
+             url('fonts/beIN-Normal.woff') format('woff'),
+             url('fonts/beIN-Normal.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .font-brand {
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      /* Arabic Specific Overrides */
+      [lang="ar"] {
+        font-family: 'beIN Normal', 'Noto Sans Arabic', sans-serif !important;
+      }
+      [lang="ar"] h1, 
+      [lang="ar"] h2, 
+      [lang="ar"] h3, 
+      [lang="ar"] h4,
+      [lang="ar"] .font-brand,
+      [lang="ar"] .font-black,
+      [lang="ar"] .font-bold {
+        font-family: 'beIN Black', 'Noto Sans Arabic', sans-serif !important;
+      }
+      [lang="ar"] p, 
+      [lang="ar"] span, 
+      [lang="ar"] a, 
+      [lang="ar"] button,
+      [lang="ar"] div:not(.font-brand) {
+        font-family: 'beIN Normal', 'Noto Sans Arabic', sans-serif;
+      }
+
+      [dir="rtl"] {
+        /* Fallback if beIN is not loaded */
+        font-family: 'Noto Sans Arabic', 'Inter', sans-serif;
+      }
+      
+      .scroll-smooth {
+        scroll-behavior: smooth;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="bg-white text-slate-900 scroll-smooth">
+    <div id="root"></div>
+  </body>
+</html>
